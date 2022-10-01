@@ -43,6 +43,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Notification.cs" />
+    <Compile Include="SDK\DefaultStyles.cs" />
     <Compile Include="SDK\WindowHelper.cs" />
     <Compile Include="SDK\EmployeeHelper.cs" />
     <Compile Include="SettingsWindow.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="InputHelper.cs" />
     <Compile Include="UIFactory.cs" />
     <Compile Include="Utilities.cs" />
+    <Compile Include="Window\EmployeeLeadSpecChangeWindow.cs" />
     <Compile Include="Window\EmployeeDemandChangeWindow.cs" />
     <Compile Include="Window\EmployeeTraitChangeWindow.cs" />
     <Compile Include="Window\WindowStyles.cs" />

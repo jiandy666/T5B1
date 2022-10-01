@@ -4,6 +4,7 @@ using System.Linq;
 using OrbCreationExtensions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityStandardAssets.CinematicEffects.Bloom;
 using Random = System.Random;
 
 namespace Trainer_v5
@@ -551,7 +552,7 @@ namespace Trainer_v5
         {
           foreach (var role in selectedRoles)
           {
-            actor.employee.ChangeSkillDirect(role.Key.ToEmployeeRole(), 1f);
+            // actor.employee.ChangeSkillDirect(role.Key.ToEmployeeRole(), 1f);
 
             foreach (var specialization in selectedSpecializations)
             {
@@ -819,6 +820,21 @@ namespace Trainer_v5
     public static void MonthDays()
     {
       WindowManager.SpawnInputDialog("How many days per month do you want?", "Days per month", "2", MonthDaysAction);
+    }
+
+    #endregion
+
+    #region Extend Deadline
+
+    public static void ExtendDeadline()
+    {
+	    foreach (var work in Settings.MyCompany.WorkItems)
+	    {
+		    var contract = work.contract;
+		    if (contract == null) continue;
+		    var deadline = contract.Deadline;
+		    contract.Deadline = new SDateTime(deadline.Year + 1, deadline.Month, deadline.Day);
+	    }
     }
 
     #endregion

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Trainer_v5.Window;
-using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -24,6 +23,7 @@ namespace Trainer_v5
 				UIFactory.Button("Demand", () => EmployeeDemandChangeWindow.Instance.Show()),
 				// UIFactory.Button("Creativity",  SetCreativity),
 				UIFactory.Button("Inspiration", SetInspiration),
+				UIFactory.Button("LeadSpec", () => EmployeeLeadSpecChangeWindow.Instance.Show()),
 			};
 
 			// add components to DetailWindow
