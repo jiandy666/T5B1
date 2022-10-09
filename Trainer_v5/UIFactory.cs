@@ -64,6 +64,15 @@ namespace Trainer_v5
 			toggle.onValueChanged.AddListener(action);
 			return toggle;
 		}
+
+
+		public static InputField
+		MultilineInput()
+		{
+			var r = WindowManager.SpawnInputbox();
+			r.lineType = InputField.LineType.MultiLineNewline;
+			return r;
+		}
 	}
 
 
